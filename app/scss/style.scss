@@ -1,11 +1,143 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
-.container{
- 
+.header-top{
+  &__contacts{
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+  }
+  &__info{
+    margin-left: 25px;
+    font-size: 13px;
+  }
+  &__info-link{
+    display: block;
+    color: $accent;
+    margin-bottom: 5px;
+  }
+  &__tel{
+    margin-left: auto;
+  }
+  &__tel-link{
+    display: block;
+    color: $accent;
+  }
+  &__tel-link + .header-top__tel-link{
+    margin-top: 10px;
+  }
+  &__inner{
+    background-color: $accent;
+    padding: 12px 0;
+    
+  }
+  &__items{
+    display: flex;
+    align-items: center;
+  }
+  &__logo-img{
+    margin-left: 15px;
+  }
 }
+
+.menu{
+  margin: 0 auto;
+  &__list{
+    display: flex;
+    margin: 0 auto;
+  }
+  &__item{
+    font-size: 15px;
+    color: #fff;
+    padding: 2px 3px;
+    transition: all .3s;
+    border-bottom: 1px solid $accent;
+    &:hover{
+      border-bottom: 1px solid #fff;
+    }
+  }
+  &__item + .menu__item{
+    margin-left: 50px;
+  }
+  &__link{
+    color: inherit;
+  }
+}
+
+.social{
+  margin-right: 45px;
+  margin-left: 150px;
+  &__link{
+    margin-right: 10px;
+    svg{
+      fill: #3B5038;
+      width: 20px;
+      height: 20px;
+      transition: all .3s;
+    }
+    &:hover{
+      svg{
+        fill: #1FC303;
+      }
+    }
+  }
+  &__link--facebook{
+    svg{
+      width: 12px;
+    }
+  }
+}
+
+.header-content{
+  background-image: url('../images/bg.jpg');
+  &__wrapper{
+    background-color:rgba(89, 171, 82, 0.8);
+  }
+  &__inner{
+    min-height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__title{
+    @extend %roboto-700;
+    font-size: 50px;
+    color: #fff;
+    max-width: 565px;
+    margin-bottom: 50px;
+  }
+  &__text{
+    max-width: 535px;
+    @extend %monserrat-400;
+    line-height: 25px;
+    color: $accent;
+    margin-bottom: 50px;
+  }
+  &__btn{
+    padding: 5px 25px;
+    @extend %roboto-700;
+  }
+  &__video-inner{
+    background-color: $accent;
+    border-radius: 25px;
+  }
+
+  &__video-box{
+    margin: 30px;
+    width: 485px;
+    height: 290px;
+    overflow: hidden;
+    object-fit: cover;
+    background-image: url('../images/video-bg.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 
 
 

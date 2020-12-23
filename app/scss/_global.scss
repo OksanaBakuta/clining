@@ -1,5 +1,31 @@
 html,
 body{
   height: 100%;
-  
 }
+body{
+  color: $accent;
+  @extend %roboto-400;
+  display: flex;
+  flex-direction: column;
+}
+
+.container{
+  width: 1220px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.btn-more{
+  background-color: $accent;
+  border-radius: 25px;
+  color: #fff;
+  border: 1px solid $accent;
+  cursor: pointer;
+  transition: all .3s;
+  &:hover{
+    background-color: #fff;
+    color: $accent;
+  }
+
+}
+
