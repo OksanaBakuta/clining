@@ -4,6 +4,8 @@
 @import 'libs';
 @import 'global';
 
+
+
 .header-top{
   &__contacts{
     padding: 10px 0;
@@ -138,7 +140,29 @@
   }
 }
 
-
+.info{
+  padding: 50px 0;
+  &__items{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item{
+    @extend %monserrat-400;
+    font-size: 20px;
+    text-align: center;
+    color: $accent;
+    max-width: 230px;
+  }
+  &__num-box{
+    @extend %roboto-700;
+    font-size: 50px;
+    display: block;
+    margin-bottom: 20px;
+  }
+  &__item-num{
+    opacity: 0;
+  }
+}
 
 
 

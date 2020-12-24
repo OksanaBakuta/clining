@@ -19,5 +19,10 @@
     "gulp-sass": "^4.1.0",
     "gulp-uglify": "^3.0.2",
     "jquery": "^3.5.1"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "in-view": "^0.6.1",
+    "jquery.animate-number": "0.0.14"
   }
 }
