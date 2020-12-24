@@ -15,7 +15,7 @@ body{
   padding: 0 10px;
 }
 
-.btn-more{
+.btn-link{
   background-color: $accent;
   border-radius: 25px;
   color: #fff;
@@ -27,5 +27,34 @@ body{
     color: $accent;
   }
 
+}
+
+.bg{
+  background-image: url('../images/bg.jpg');
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: cover;
+}
+
+.bg-wrapper{
+  background-color:rgba(233, 246, 227, 0.8);;
+}
+
+.title{
+  @extend %monserrat-700;
+  color: $accent;
+  font-size: 40px;
+  text-align: center;
+  padding-bottom: 5px;
+  position: relative;
+  &::before{
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background-color: $accent;
+    bottom: 0;
+    left: 37%;
+  }
 }
 
