@@ -9,6 +9,7 @@
   "author": "Busel Oksana",
   "license": "ISC",
   "devDependencies": {
+    "@chenfengyuan/datepicker": "^1.0.10",
     "@fancyapps/fancybox": "^3.5.7",
     "browser-sync": "^2.26.13",
     "del": "^6.0.0",
@@ -18,7 +19,8 @@
     "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^4.1.0",
     "gulp-uglify": "^3.0.2",
-    "jquery": "^3.5.1"
+    "jquery": "^3.5.1",
+    "jquery-ui": "^1.12.1"
   },
   "dependencies": {
     "aos": "^2.3.4",

@@ -35,6 +35,7 @@ function scripts(){
     'node_modules/jquery/dist/jquery.js',
     'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
     'node_modules/jquery.animate-number/jquery.animateNumber.js',
+    'node_modules/@chenfengyuan/datepicker/dist/datepicker.js',
     'app/js/main.js'
   ])
   .pipe(concat('main.min.js'))
