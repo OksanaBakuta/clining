@@ -160,7 +160,9 @@
   <section class="services bg">
     <div class="services__wrapper bg-wrapper">
       <div class="container">
-        <h2 class="services__title title">Наши услуги</h2>
+        <div class="services__title-box title-box">
+          <h2 class="title">Наши услуги</h2>
+        </div>
         <div class="services__items">
           <div class="services__item">
             <div class="services__box-img">
@@ -213,7 +215,7 @@
             </div>
             <div class="services__item-title">
               <a class="services__item-link" href="#">
-              Уборка после пожара
+                Уборка после пожара
               </a>
             </div>
             <a class="services__link-btn btn-link" href="#">Подробнее</a>
@@ -260,7 +262,7 @@
               Есть вопросы?
             </h3>
             <p class="question__content-text">
-              Оставте пожалуйста свои данные и наш менеджер свяжется с Вами в течении  10мин.
+              Оставте пожалуйста свои данные и наш менеджер свяжется с Вами в течении 10мин.
             </p>
           </div>
           <form class="form-info" action="#">
@@ -280,9 +282,86 @@
               <input class="form-info__input" data-toggle="datepicker" type="text" placeholder="Дата">
               <img src="images/icons/calendar.svg" alt="calendar icon">
             </div>
-            
+
             <button class="form-info__btn" type="submit">Позвоните мне</button>
           </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="price">
+    <div class="container">
+      <div class="title-box price__title-box">
+        <h2 class="title">Наши цены</h2>
+      </div>
+      <div class="tabs">
+        <div class="tabs__top">
+          <a class="tabs__btn" href="#content-1">Коттедж</a>
+          <a class="tabs__btn tabs__btn--active" href="#content-2">Квартира</a>
+          <a class="tabs__btn" href="#content-3">Офис</a>
+        </div>
+        <div class="tabs__content">
+          <div class="tabs__content-items" id="content-1">
+            <div class="tabs__item">
+              <p class="tabs__text">
+                Один этаж
+              </p>
+              <p class="tabs__price">от 30 грн/м2</p>
+            </div>
+            <div class="tabs__item">
+              <p class="tabs__text">
+                Два этажа
+              </p>
+              <p class="tabs__price">от 50 грн/м2</p>
+            </div>
+            <div class="tabs__item">
+              <p class="tabs__text">
+                Три этажа
+              </p>
+              <p class="tabs__price">от 70 грн/м2</p>
+            </div>
+          </div>
+          <div class="tabs__content-items tabs__content-items--active" id="content-2">
+            <div class="tabs__item">
+              <p class="tabs__text">
+                Одна комната
+              </p>
+              <p class="tabs__price">от 20 грн/м2</p>
+            </div>
+            <div class="tabs__item">
+              <p class="tabs__text">
+                Две комнаты
+              </p>
+              <p class="tabs__price">от 40 грн/м2</p>
+            </div>
+            <div class="tabs__item">
+              <p class="tabs__text">
+                Три комнаты
+              </p>
+              <p class="tabs__price">от 50 грн/м2</p>
+            </div>
+          </div>
+          <div class="tabs__content-items" id="content-3">
+            <div class="tabs__item">
+              <p class="tabs__text">
+                Одна комата
+              </p>
+              <p class="tabs__price">от 20 грн/м2</p>
+            </div>
+            <div class="tabs__item">
+              <p class="tabs__text">
+                Две комнаты
+              </p>
+              <p class="tabs__price">от 30 грн/м2</p>
+            </div>
+            <div class="tabs__item">
+              <p class="tabs__text">
+                Три комнаты
+              </p>
+              <p class="tabs__price">от 40 грн/м2</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

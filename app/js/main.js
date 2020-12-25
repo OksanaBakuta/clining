@@ -1,5 +1,15 @@
 $(function(){
 
+  $('.tabs__btn').on('click', function(e){
+    e.preventDefault();
+    $('.tabs__btn').removeClass('tabs__btn--active');
+    $(this).addClass('tabs__btn--active');
+
+    $('.tabs__content-items').removeClass('tabs__content-items--active');
+    $($(this).attr('href')).addClass('tabs__content-items--active');
+
+  });
+
   var show = true;
   $(window).on("scroll load resize", function () {
     if (!show) return false;
