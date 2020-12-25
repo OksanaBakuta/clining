@@ -1,5 +1,12 @@
 $(function(){
 
+  
+    $(".gallery__btn").on('click',function () {
+      $(".gallery__img-link--no-active").toggleClass("gallery__img-link");
+      return false;
+    });
+  
+
   $('.tabs__btn').on('click', function(e){
     e.preventDefault();
     $('.tabs__btn').removeClass('tabs__btn--active');
