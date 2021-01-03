@@ -147,6 +147,15 @@
       max-width: 450px;
     }
   }
+  .info{
+    &__item{
+      font-size: 13px;
+      width: 200px;
+    }
+    &__num-box{
+      font-size: 30px;
+    }
+  }
 }
 
 @media (max-width: 550px){
@@ -160,6 +169,19 @@
     &__link-btn{
       font-size: 12px;
       padding: 5px 10px;
+    }
+  }
+  .info{
+    &__items{
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    &__item{
+      margin: 0 0 30px;
+      width: 35%;
+    }
+    &__num-box{
+      margin-bottom: 5px;
     }
   }
 }
