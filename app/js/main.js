@@ -13,8 +13,10 @@ $(function(){
   $(window).scroll(function(){
     if($(document).scrollTop() > hh){
       $('.header-top__inner').addClass('header-top__inner--fixed');
+      $('.arrow-fixed').addClass('arrow-fixed--active');
     }else{
       $('.header-top__inner').removeClass('header-top__inner--fixed');
+      $('.arrow-fixed').removeClass('arrow-fixed--active');
     }
   });
 
