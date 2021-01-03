@@ -37,11 +37,38 @@
   &__inner{
     background-color: $bg;
     padding: 8px 0;
-    
+  }
+  .logo-link{
+    display: none;
+  }
+  &__inner.header-top__inner--fixed{
+    transition: all .3s;
+    background-color: #A7D098;
+    padding: 13px;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    top: 0;
+    .logo-link{
+      display: block;
+      position: absolute;
+      left: 15px;
+    }
+    .logo-img{
+      height: 35px;
+    }
+    .menu__item{
+      color: $accent;
+      @extend %roboto-700;
+      &:hover{
+        border-bottom: 1px solid $accent;
+      }
+    }
   }
   &__items{
     display: flex;
     align-items: center;
+    position: relative;
   }
 }
 
@@ -56,7 +83,7 @@
     color: #fff;
     padding: 2px 3px;
     transition: all .3s;
-    border-bottom: 1px solid $accent;
+    border-bottom: 1px solid transparent;
     &:hover{
       border-bottom: 1px solid #fff;
     }
@@ -64,7 +91,8 @@
   &__item + .menu__item{
     margin-left: 50px;
   }
-  &__link{
+  &__link,
+  &__link-contact{
     color: inherit;
   }
 }
@@ -217,11 +245,11 @@
   background-image: url('../images/bg-2.jpg');
   background-position: right bottom;
   background-repeat: no-repeat;
-  background-size: 63%;
+  background-size: 70%;
 }
 .services{
   &__wrapper{
-    padding: 60px 0;
+    padding: 85px 0;
   }
   &__title-box{
     margin-bottom: 50px;
@@ -418,7 +446,7 @@
 }
 
 .price{
-  padding: 60px 0;
+  padding: 75px 0;
   &__title-box{
     margin-bottom: 55px;
   }
@@ -478,11 +506,11 @@
   background-image: url('../images/bg-3.jpg');
   background-position: left top;
   background-repeat: no-repeat;
-  background-size: 55%;
+  background-size: 60%;
 }
 .gallery{
   &__wrapper{
-    padding: 60px 0;
+    padding: 80px 0;
   }
   &__title{
     margin-bottom: 50px;
