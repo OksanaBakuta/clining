@@ -3,10 +3,12 @@ $(function(){
   $(window).on('load resize', function (){
     if ($(window).width() < 765){
       $('.menu__item--no-active').addClass('menu__item');
-    }else{
+      $('.services__img-text').addClass('services__img-text--media');
+    } else{
       $('.menu__item--no-active').removeClass('menu__item');
+      $('.services__img-text').removeClass('services__img-text--media');
     }
-  };
+  });
 
   $('.menu-btn').on('click', function(){
     $('.header-top__inner').toggleClass('header-top__inner--active');

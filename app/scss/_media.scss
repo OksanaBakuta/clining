@@ -1,4 +1,13 @@
+@media (max-width: 1400px){
+  .arrow-fixed.arrow-fixed--active{
+    right: 0;
+  }
+}
+
 @media (max-width: 1200px){
+  .container{
+    max-width: 1100px;
+  }
   .header-content{
     &__wrapper{
       padding: 50px 0;
@@ -27,9 +36,22 @@
       text-align: center;
     }
   }
+  .services{
+    &--bg{
+      background-size: 100%;
+    }
+  }
 }
 
 @media (max-width: 1080px){
+  .container{
+    max-width: 800px;
+  }
+  .title{
+    &__text{
+      font-size: 30px;
+    }
+  }
   .social{
     margin-left: 40px;
     margin-right: 0;
@@ -46,9 +68,41 @@
       height: 170px;
     }
   }
+  .services{
+    &__wrapper {
+      padding: 60px 0;
+    }
+    &__box-img,
+    &__img{
+      height: 190px;
+    }
+    &--bg{
+      background-size: 100%;
+    }
+  }
+}
+
+@media (max-width: 860px){
+  .services{
+    &__items{
+      flex-wrap: wrap;
+    }
+    &__item{
+      width: 40%;
+    }
+  }
 }
 
 @media (max-width: 765px){
+  .title{
+    &__text::before{
+      width: 60px;
+      left: -10px;
+    }
+  }
+  .container{
+    padding: 0 25px;
+  }
   .header-top{
     &.header-top--active{
       background-color: #A7D098;
@@ -148,12 +202,32 @@
     }
   }
   .info{
+    &__items{
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
     &__item{
       font-size: 13px;
       width: 200px;
     }
     &__num-box{
       font-size: 30px;
+    }
+    &__item{
+      margin: 0 0 30px;
+      width: 35%;
+    }
+    &__num-box{
+      margin-bottom: 5px;
+    }
+  }
+  .services{
+    &__box-img,
+    &__img {
+      height: 145px;
+    }
+    &__item-link{
+      padding: 10px 20px;
     }
   }
 }
@@ -171,22 +245,26 @@
       padding: 5px 10px;
     }
   }
-  .info{
-    &__items{
-      flex-wrap: wrap;
-      justify-content: space-around;
+  .services{
+    &__box-img,
+    &__img{
+      height: 120px;
     }
-    &__item{
-      margin: 0 0 30px;
-      width: 35%;
+    &__item-title{
+      font-size: 13px;
     }
-    &__num-box{
-      margin-bottom: 5px;
+    &__wrapper {
+      padding: 40px 0 20px;
     }
   }
 }
 
 @media (max-width: 440px){
+  .title{
+    &__text{
+      font-size: 25px;
+    }
+  }
   .header-top{
     &__contacts{
       justify-content: space-between;
@@ -197,5 +275,24 @@
   }
   .social{
    display: none;
+  }
+  .header-content{
+    &__video-inner{
+      padding: 15px;
+    }
+  }
+  .info{
+    &__num-box{
+      font-size: 27px;
+    }
+  }
+  .services{
+    &__item{
+      width: 100%;
+    }
+    &__box-img,
+    &__img{
+      height: 170px;
+    }
   }
 }
