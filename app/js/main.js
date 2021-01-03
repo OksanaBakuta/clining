@@ -1,6 +1,19 @@
 $(function(){
 
-  $('.menu__link').click(function (e) {
+  $(window).on('load resize', function (){
+    if ($(window).width() < 765){
+      $('.menu__item--no-active').addClass('menu__item');
+    }else{
+      $('.menu__item--no-active').removeClass('menu__item');
+    }
+  };
+
+  $('.menu-btn').on('click', function(){
+    $('.header-top__inner').toggleClass('header-top__inner--active');
+    $('.menu-btn').toggleClass('menu-btn--active');
+  });
+
+  $('.menu__item-link').click(function (e) {
     e.preventDefault();
     var target = $($(this).attr('href'));
     if (target.length) {
