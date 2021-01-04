@@ -216,51 +216,82 @@
   padding: 35px 0;
   background-color: #A7D098;
   &__logo{
-    height: 90px;
+    height: 70px;
+    margin: 0 auto 30px;
   }
-  &__inner{
+  &__inner,
+  &__contacts,
+  &__info-services{
     display: flex;
     justify-content: space-between;
   }
-  ul.footer__list{
+  &__contacts{
+    width: 37%;
+  }
+  &__info-services{
+    width: 36%;
+  }
+  &__addres-box{
+    max-width: 200px;
+  }
+  &__tel,
+  &__services{
+    width: 140px;
+    margin-right: 20px;
+  }
+  &__info{
+    width: 140px;
+  }
+  &__item + .footer__item{
+    margin-top: 10px;
+  }
+  &__addres{
     margin-bottom: 20px;
   }
-  &__item{
-    font-size: 15px;
+  &__link,
+  &__addres-text,
+  &__link-tel{
+    font-size: 13px;
     color: #333;
-    line-height: 25px;
-    margin-bottom: 7px;
+    line-height: 19px;
+    margin-bottom: 15px;
+  }
+  &__link-tel{
+    display: block;
+  }
+  &__link{
     transition: all .3s;
     border-bottom: 1px solid transparent;
-    a{
-      color: #333;
-    }
     &:hover{
       border-bottom: 1px solid #333;
     }
   }
-  &__list-title{
+  &__title{
     @extend %roboto-700;
-    font-size: 20px;
+    font-size: 16px;
     color: #333;
-    margin-bottom: 10px;
+    margin-bottom: 17px;
   }
   .social{
     margin: 0;
-  }
-  .social__link{
-    svg{
-      width: 50px;
-      height: 40px;
+    &__link{
+      margin-right: 0;
+      svg{
+        width: 35px;
+        height: 30px;
+      }
+      path{
+        transition: all .3s;
+        fill: $bg;
+      }
     }
-    path{
-      transition: all .3s;
-      fill: $bg;
+    &__link:hover{
+      path{
+        fill: #fff;
+      }
     }
-  }
-  .social__link:hover{
-    path{
-      fill: #fff;
+    &__link + .social__link{
+      margin-left: 10px;
     }
   }
 }
@@ -390,7 +421,6 @@
   &__inner{
     display: flex;
     justify-content: space-around;
-    align-items: center;
   }
   &__content{
     color: #fff;
@@ -419,7 +449,7 @@
   position: relative;
  
   &__input{
-    padding: 0 50px 0 25px;
+    padding: 0 50px 0 10px;
     width: 295px;
     height: 30px;
     outline: $default;
@@ -429,8 +459,8 @@
       color: #AABBA8;
     }
   }
-  &__input + .form-info__input{
-    margin-top: 20px;
+  &__input-box + .form-info__input-box{
+    margin-top: 14px;
   }
   &__btn{
     display: block;
@@ -444,7 +474,6 @@
     cursor: pointer;
   }
   &__input-box{
-    margin-top: 14px;
     display: flex;
     img{
       margin-left: -35px;
@@ -633,7 +662,7 @@
 .buy{
   .form-info__input-box--date,
   .form-info__input-box--addres{
-    display: inline-flex;
+    display: flex;
   }
 }
 
@@ -652,7 +681,7 @@
   }
   &__item-img{
     margin: 0 auto 40px;
-    height: 144px;
+    height: 95px;
   }
   &__item-text{
     @extend %roboto-700;
