@@ -385,7 +385,7 @@
 .question{
   &__wrapper{
     background-color: $bg;
-    padding: 20px 0;
+    padding: 35px 0;
   }
   &__inner{
     display: flex;
@@ -518,12 +518,13 @@
  width: 100%;
  &__top{
    display: flex;
+   margin-bottom: 15px;
  }
  &__btn{
    border-bottom: none;
    padding: 7px 10px;
    margin-right: 10px;
-   margin-bottom: 30px;
+   margin-bottom: 15px;
    background-color: #E9F6E3;
    color: #333;
    font-size: 16px;
@@ -548,7 +549,7 @@
  &__item{
    display: flex;
    justify-content: space-between;
-   align-items: center;
+   align-items: flex-start;
    padding-bottom: 20px;
    border-bottom: 1px solid #807D7D;
    font-size: 15px;
@@ -561,14 +562,21 @@
      border-bottom: none;
    }
  }
- 
+ &__text{
+   margin-right: 20px;
+ }
+ &__price{
+   min-width: 90px;
+ }
 }
+
 .gallery--bg{
   background-image: url('../images/bg-3.jpg');
   background-position: left top;
   background-repeat: no-repeat;
   background-size: 60%;
 }
+
 .gallery{
   &__wrapper{
     padding: 80px 0;

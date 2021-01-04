@@ -24,7 +24,7 @@ $(function(){
     }
   });
 
-  var hh = $('.header').height();
+  /* var hh = $('.header').height();
   $(window).scroll(function(){
     if($(document).scrollTop() > hh){
       $('.header-top__inner').addClass('header-top__inner--fixed');
@@ -33,7 +33,7 @@ $(function(){
       $('.header-top__inner').removeClass('header-top__inner--fixed');
       $('.arrow-fixed').removeClass('arrow-fixed--active');
     }
-  });
+  }); */
 
   $('.tabs__btn').on('click', function(e){
     e.preventDefault();
@@ -44,19 +44,41 @@ $(function(){
     $($(this).attr('href')).addClass('tabs__content-items--active');
 
   });
-  
-  $('.info__item-num').each(function () {
-    $(this).prop('Counter', 0).animate({
-      Counter: $(this).text()
-    },
-      {
+
+  function start_count() {
+    $('.info__item-num').each(function () {
+      $(this).prop('Counter', 0).animate({
+        Counter: $(this).text()
+      }, {
         duration: 2000,
         easing: 'swing',
         step: function (now) {
           $(this).text(Math.ceil(now));
         }
       });
+      
+    });
+  }
+  
+  var blockStatus = true;
+  var wh = $(window).height();
+  var et = $('.info').offset().top;
+  var eh = $('.info').outerHeight();
+  
+  $(window).on('load resize', function () {
+    if (wh >= et + 20&&blockStatus){
+      blockStatus = false;
+      start_count();
+    }
   });
+
+  $(window).on('scroll', function () {
+    if ($(this).scrollTop() > (et - wh)&&blockStatus) {
+      blockStatus = false;
+      start_count();
+    }
+  }); 
+  
 
   
   $('[data-toggle="datepicker"]').datepicker({
