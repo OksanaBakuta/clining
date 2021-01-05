@@ -7,10 +7,46 @@
 
 
 .header-top{
+  &.header-top--fixed{
+    transition: all .3s;
+    background-color: #A7D098;
+    padding: 13px;
+    position: fixed;
+    width: 100%;
+    z-index: 4;
+    top: 0;
+    padding: 0;
+    .header-top__info,
+    .header-top__tel,
+    .social{
+      display: none;
+    }
+    .header-top__logo{
+      position: absolute;
+      left: 15px;
+      top: 0;
+      z-index: 5;
+    }
+    .header-top__logo-img{
+      height: 42px;
+    }
+    .header-top__inner{
+      background-color: #A7D098;
+      padding-top: 0;
+    }
+    .menu__item{
+      color: $accent;
+      @extend %roboto-700;
+      &:hover{
+        border-bottom: 1px solid $accent;
+      }
+    }
+  }
   &__contacts{
     padding: 5px 0;
     display: flex;
     align-items: center;
+    position: relative;
   }
   &__logo-img{
     padding: 5px;
@@ -40,30 +76,6 @@
   }
   .logo-link{
     display: none;
-  }
-  &__inner.header-top__inner--fixed{
-    transition: all .3s;
-    background-color: #A7D098;
-    padding: 13px;
-    position: fixed;
-    width: 100%;
-    z-index: 10;
-    top: 0;
-    .logo-link{
-      display: block;
-      position: absolute;
-      left: 15px;
-    }
-    .logo-img{
-      height: 35px;
-    }
-    .menu__item{
-      color: $accent;
-      @extend %roboto-700;
-      &:hover{
-        border-bottom: 1px solid $accent;
-      }
-    }
   }
   &__items{
     display: flex;
@@ -399,17 +411,6 @@
     opacity: 1;
     width: 80%;
     background-color: rgba(38, 75, 32, 0.5);
-  }
-}
-
-.arrow-fixed{
-  position: fixed;
-  right: 30px;
-  bottom: 30px;
-  opacity: 0;
-  transition: all .3s;
-  &--active{
-    opacity: 0.7;
   }
 }
 
